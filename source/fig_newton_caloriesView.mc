@@ -48,7 +48,7 @@ class fig_newton_caloriesView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
         dc.clear();
         myText.draw(dc);
-        dc.drawBitmap(dc.getWidth()/2 - 50, dc.getHeight()/2 - 125, fig_newton_pic);
+        dc.drawBitmap(dc.getWidth()/2 - 39, dc.getHeight()/2 - 125, fig_newton_pic);
     }
 
     // Called when this View is removed from the screen. Save the
