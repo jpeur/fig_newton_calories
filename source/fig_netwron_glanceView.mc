@@ -23,13 +23,13 @@ class fig_newton_glanceView extends WatchUi.GlanceView {
             cals_burned = info.calories;
             fig_newtons = (cals_burned / cals_per_fig_newton).format("%.2f");
             var fig_newtons_str = fig_newtons.toString();
-            System.println("Calories burned: " + cals_burned.toString());
-            System.println("Fig Newtons: " + fig_newtons_str);
+            // System.println("Calories burned: " + cals_burned.toString());
+            // System.println("Fig Newtons: " + fig_newtons_str);
 
             myText = new WatchUi.Text({
                 :text => fig_newtons_str + " Fig Newtons!",
                 :color => Graphics.COLOR_WHITE,
-                :font => Graphics.FONT_SMALL,
+                :font => Graphics.FONT_XTINY,
                 :locX => LAYOUT_HALIGN_CENTER,
                 :locY => LAYOUT_VALIGN_CENTER
     

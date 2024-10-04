@@ -27,7 +27,7 @@ class fig_newton_caloriesView extends WatchUi.View {
         fig_newton_pic = new WatchUi.Bitmap({
             :rezId => Rez.Drawables.fig_newton_2,
             :locX => width/2 - pic_width/2,
-            :locY => height/2 - (1.5 * pic_height),
+            :locY => height/2 - (1.25 * pic_height),
             :width => pic_width,
             :height => pic_height
         });
@@ -41,8 +41,8 @@ class fig_newton_caloriesView extends WatchUi.View {
         cals_burned = info.calories;
         fig_newtons = (cals_burned / cals_per_fig_newton).format("%.2f");
         var fig_newtons_str = fig_newtons.toString();
-        System.println("Calories burned: " + cals_burned.toString());
-        System.println("Fig Newtons: " + fig_newtons_str);
+        // System.println("Calories burned: " + cals_burned.toString());
+        // System.println("Fig Newtons: " + fig_newtons_str);
 
         myText = new WatchUi.Text({
             :text => "\nYou've burned \n" + fig_newtons_str + " Fig Newtons!",
