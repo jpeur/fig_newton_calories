@@ -29,7 +29,7 @@ class fig_newton_glanceView extends WatchUi.GlanceView {
             myText = new WatchUi.Text({
                 :text => fig_newtons_str + " Fig Newtons!",
                 :color => Graphics.COLOR_WHITE,
-                :font => Graphics.FONT_XTINY,
+                :font => Graphics.FONT_TINY,
                 :locX => LAYOUT_HALIGN_CENTER,
                 :locY => LAYOUT_VALIGN_CENTER
     
