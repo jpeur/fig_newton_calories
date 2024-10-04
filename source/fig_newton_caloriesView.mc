@@ -9,6 +9,10 @@ class fig_newton_caloriesView extends WatchUi.View {
     private var fig_newtons = 0.0;
     private var myText;
     var fig_newton_pic;
+    var width;
+    var height;
+    var pic_width = 100;
+    var pic_height = 78;
 
     function initialize() {
         View.initialize();
@@ -17,7 +21,16 @@ class fig_newton_caloriesView extends WatchUi.View {
     // Load your resources here
     function onLayout(dc as Dc) as Void {
         // setLayout(Rez.Layouts.MainLayout(dc));
-        fig_newton_pic = WatchUi.loadResource(Rez.Drawables.fig_newton);
+        // fig_newton_pic = WatchUi.loadResource(Rez.Drawables.fig_newton);
+        width = dc.getWidth();
+        height = dc.getHeight();
+        fig_newton_pic = new WatchUi.Bitmap({
+            :rezId => Rez.Drawables.fig_newton_2,
+            :locX => width/2 - pic_width/2,
+            :locY => height/2 - (1.5 * pic_height),
+            :width => pic_width,
+            :height => pic_height
+        });
     }
 
     // Called when this View is brought to the foreground. Restore
@@ -32,7 +45,7 @@ class fig_newton_caloriesView extends WatchUi.View {
         System.println("Fig Newtons: " + fig_newtons_str);
 
         myText = new WatchUi.Text({
-            :text => "You've burned \n" + fig_newtons_str + " Fig Newtons!",
+            :text => "\nYou've burned \n" + fig_newtons_str + " Fig Newtons!",
             :color => Graphics.COLOR_WHITE,
             :font => Graphics.FONT_SMALL,
             :locX => LAYOUT_HALIGN_CENTER,
@@ -48,7 +61,13 @@ class fig_newton_caloriesView extends WatchUi.View {
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_BLACK);
         dc.clear();
         myText.draw(dc);
-        dc.drawBitmap(dc.getWidth()/2 - 39, dc.getHeight()/2 - 125, fig_newton_pic);
+        // System.println("Height: " + height);
+        // System.println("Width: " + width);
+        // var height_of_pic = fig_newton_pic.getDimensions()[1];
+        // var width_of_pic = fig_newton_pic.getDimensions()[0];
+        // System.println("Height of pic: " + height_of_pic);
+        // System.println("Width of pic: " + width_of_pic);
+        fig_newton_pic.draw(dc);
     }
 
     // Called when this View is removed from the screen. Save the

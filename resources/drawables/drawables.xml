@@ -1,4 +1,4 @@
 <drawables>
-    <bitmap id="LauncherIcon" filename="launcher_icon.png" />
+    <bitmap id="fig_newton_2" filename="fig_newton_small_copy.png" />
     <bitmap id="fig_newton" filename="fig_newton_small.png" />
 </drawables>
